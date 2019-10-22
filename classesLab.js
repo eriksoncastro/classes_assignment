@@ -43,3 +43,62 @@ let kidsBook = new Book("Cat in the Hat","Dr.Seuss",6.5)
 
 // b. Add a method to `Book` called `isGood` that returns `true` if its rating is greater than or equal to 7
 console.log(kidsBook.isGood())
+
+// ## Question 3
+
+// a. Create a `Dog` class with four properties: `name (string), breed (string), mood (string), and hungry (boolean)`.
+class Dog {
+  constructor(name,breed,mood,hungry){
+    this.name = name
+    this.breed = breed
+    this.mood = mood
+    this.hungry = hungry
+  }
+  playFetch() {
+    this.mood = "playful"
+    this.hungry = true
+    return "Ruff!"
+  }
+  feed() {
+    if (this.hungry === true){
+      this.hungry = false
+      return "Woof!"
+    } else{
+      return "The dog doesn't look hungry"
+    }
+  }
+  toString() {
+    return `${this.name} is a ${this.breed}. He is in a ${this.mood} mood and it is ${this.hungry} that he is hungry.`
+  }
+}
+
+// b. Add a method called `playFetch`. It should set the dog's `hungry` property to `true`, set its mood property to `playful`, and log "Ruff!"
+let jin = new Dog("Jin","Shiba Inu","sly",false)
+console.log(jin.playFetch())
+// c. Add a method called `feed`. If the dog is hungry, it should set `hungry` to `false` and print "Woof!" If the dog is not hungry, it should log "The dog doesn't look hungry"
+console.log(jin.feed())
+
+// d. Add a method called `toString` that returns a description of the dog:
+console.log(jin.toString())
+
+// ## Question 4
+
+// There are three common scales that are used to measure temperature: Celsius, Fahrenheit, and Kelvin:
+
+// C = (F - 32) / 1.8
+// F = 1.8 * C + 32
+// K = C + 273
+
+// a. Make an object called `freezingPoint` that has three properties: `celsius`, `fahrenheit`, and `kelvin`. Give them all values equal to the freezing point of water.
+
+
+// b. Make a class called `Celsius` that has one property: `celsius`, and two methods `getFahrenheitTemp`, and `getKelvinTemp`.
+
+// ```js
+// let outsideTempt = new Celsius(10.0)
+// outsideTempt.celsius //returns 10.0
+// outsideTempt.getKelvinTemp() //returns 283.0
+// outsideTempt.getFahrenheitTemp() //returns 50.0
+// ```
+
+// c. Give `Celsius` a method called `isBelowFreezing` that returns a `Bool` (true if the temperature is below freezing).
